@@ -5,6 +5,8 @@
   "scripts": {
     "serve": "cd client && npm run serve",
     "dev": "cd server && npm run dev",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
     "postinstall": "npm-run-all install:*",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "lint": "eslint . --ext .js,.vue --fix",
