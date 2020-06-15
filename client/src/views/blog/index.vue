@@ -10,13 +10,13 @@
             <div class="entry">211111111111111111</div>
           </el-col>
           <el-col :span="14">
-            <el-row :gutter="5">
-              <el-col :span="6">
+            <el-row :gutter="10">
+              <el-col :span="8">
                 <el-input v-model="input4">
                   <i slot="prefix" class="el-input__icon el-icon-search"></i>
                 </el-input>
               </el-col>
-              <el-col :span="18">
+              <el-col :span="16">
                 <tabbar></tabbar>
               </el-col>
             </el-row>
@@ -32,7 +32,7 @@
                 src="https://mirror-gold-cdn.xitu.io/168e084832fd5ec238f?imageView2/1/w/180/h/180/q/85/format/webp/interlace/1"
                 :size="130"
               ></el-avatar>
-              <h1 class="main-title">程序员成长指北</h1>
+              <h1 class="main-title">王建文技术博客</h1>
               <p class="description">一个用心帮助你成长的博客</p>
               <p class="start-action">
                 <el-button type="success" size="medium ">开始阅读 →</el-button>
@@ -54,6 +54,32 @@
                     <p>一个有趣的且乐于分享的人。座右铭：今天未完成的，明天更不会完成。</p>
                   </el-col>
                 </el-row>
+              </div>
+              <ul class="flex">
+                <li class="blog-item">
+                  <a href="https://juejin.im/user/5cf288385188254abb110e3b" target="_blank">
+                    <img src="https://img.shields.io/badge/%E6%8E%98%E9%87%91-10k-42b983.svg" alt />
+                    <i class="el-icon-edit-outline"></i>
+                  </a>
+                </li>
+                <li class="blog-item">
+                  <a href="https://segmentfault.com/u/na_5a545653c24d9" target="_blank">
+                    <img src="https://img.shields.io/badge/思否-2.5k-42b983.svg" alt />
+                    <i class="el-icon-edit-outline"></i>
+                  </a>
+                </li>
+                <li class="blog-item">
+                  <a href="https://segmentfault.com/u/na_5a545653c24d9" target="_blank">
+                    <img src="https://img.shields.io/badge/慕课-认证作者-42b983.svg" alt />
+                    <i class="el-icon-edit-outline"></i>
+                  </a>
+                </li>
+              </ul>
+              <div class="koala-blog text-left">
+                 <div>这里是 koala 的博客, 最近在做一个node高级进阶的学习路线</div>
+              </div>
+              <div class="text-left">
+                 <strong>加入我们</strong>
               </div>
             </div>
           </el-main>
@@ -79,6 +105,21 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.text-left{
+  text-align: left;
+  font-size:16px;
+}
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  .blog-item {
+    font-size: 14px;
+    margin-right: 5px;
+    img {
+      margin-right: 2px;
+    }
+  }
+}
 .el-header {
   line-height: 57px;
   text-align: left;
@@ -127,6 +168,9 @@ export default {
     .start-action {
       border-bottom: 1px solid #eaecef;
       padding-bottom: 20px;
+      .el-button--medium {
+        font-size: 18px;
+      }
       .el-button--success {
         padding: 25px 45px;
         background: #42b983;
@@ -134,16 +178,23 @@ export default {
     }
     .features {
       text-align: left;
-       h2 {
+      h2 {
         font-size: 1.4rem;
         font-weight: 500;
         border-bottom: none;
         padding-bottom: 0;
         color: #5e6d7d;
       }
-      p{
-        color: #748597
+      p {
+        color: #748597;
       }
+    }
+    .koala-blog{
+      border-left: .2rem solid #dfe2e5 ;
+      padding: .25rem 0 .25rem 1rem;
+      margin: 20px 0;
+      font: 1rem;
+      color: #999;
     }
   }
 }
